@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+label,
+textarea {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+legend,
+.button {
+  font-family: 'Staatliches', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+body {
+  background: #BFD7E4;
+}
+
+body::before {
+  content: '';
+  width: 100%;
+  height: 465px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #293241;
+}
+
+.page {
+  width: 750px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+header {
+  margin: 107px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 18px; */
+}
+
+header h1 {
+  font-size: 36px;
+  color: #FFF;
+}
+
+header h2 {
+  font-size: 24px;
+  line-height: 34px;
+  color: #FFF;
+}
+
+header p {
+  font-size: 16px;
+  color: #FFF;
+  margin-bottom: 23px;
+}
+
+header .form-title {
+  margin-top: 32px;
+  background: #F67669;
+
+  width: 100%;
+  height: 133px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 20px 20px 0 0;
+}
+
+form {
+  background: #FFF;
+  border-radius: 0 0 20px 20px;
+
+  padding: 30px 64px 64px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2 {
+  background: #F67669;
+}
+
+.fieldset-wrapper legend {
+  color: #253B51;
+  font-size: 24px;
+  line-height: 34px;
+
+  padding-bottom: 8px;
+  /* margin-bottom: 14px; */
+
+  border-bottom: 1px solid #E6E6F0;
+}
+
+.fieldset-wrapper .first-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.fieldset-wrapper .first-line .input-item {
+  width: 100%;
+}
+
+.fieldset-wrapper .date-line {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.fieldset-wrapper .date-line .date-item {
+  width: 100%;
+  margin-right: 22px;
+}
+
+.fieldset-wrapper .date-line .input-item {
+  min-width: 140px;
+}
+
+.button {
+  border: none;
+  border-radius: 8px;
+  background: #F67669;
+
+  width: 100%;
+  align-items: center;
+  height: 55px;
+
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFF;
+  justify-content: center;
+  align-self: center;
+
+  margin-top: 34px;
+}
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-item label,
+.checkbox-item label {
+  font-size: 14px;
+  color: #4E4958;
+  margin-bottom: 8px;
+}
+
+.input-item label span {
+  font-size: 12px;
+  line-height: 20px;
+  color: #C1BCCC;
+}
+
+.input-item label span:hover {
+  color: #4E4958;
+}
+
+.input-item input,
+.input-item select,
+.input-item textarea {
+  padding: 0 24px;
+  border-radius: 8px;
+  border: 1px solid #E6E6F0;
+  background: #FAFAFC;
+  height: 56px;
+}
+
+.checkbox-item {
+  position: relative;
+}
+
+.checkbox-item label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin: 0;
+}
+
+.checkbox-item input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+.checkbox-item label::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+
+  border-radius: 8px;
+  border: 1px solid #E6E6F0;
+  background: #FAFAFC;
+}
+
+.checkbox-item input:checked+label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_5002_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_5002_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.checkbox-item input:focus+label::before {
+  outline: 2px solid black;
+}
+
+.input-item select {
+  appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 16px top 50%;
+}
+
+.input-item textarea {
+  padding: 8px 24px;
+  height: 168px;
+  resize: none;
+}
+
+/* .input-item input:invalid {
+  border: 1px solid #FF1010;
+} */
