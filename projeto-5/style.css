@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family: 'Source-Serif-Pro';
+}
+
+body {
+  background: #FFFFFF;
+  color: #A54328;
+}
+
+main {
+  max-width: 20rem;
+  margin-inline: auto;
+  padding: 3.5rem 2.5rem;
+  box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+img {
+  width: 100%;
+  margin-block: 2rem;
+}
+
+h1,
+h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+p,
+li,
+strong {
+  font-size: .875rem;
+  line-height: 1.125rem;
+}
+
+ul {
+  margin-bottom: 1.5rem;
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+}
+
+button {
+  font-family: 'Source-Serif-4';
+  font-size: .625rem;
+
+  background: #A54328;
+  color: #FFFFFF;
+  padding: .5rem .75rem;
+  margin-top: 2rem;
+
+  border: 0;
+  border-radius: 6px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-image: url(./assets/desktop-bg.jpg)
+  }
+
+  main {
+    flex-direction: row;
+    max-width: fit-content;
+    gap: 12.5rem;
+
+    padding: 5.625rem 3.75rem;
+  }
+
+  /* main>div {
+    flex: 1;
+    max-width: 31.25rem;
+  } */
+
+  .recipe {
+    max-width: 27.1875rem;
+  }
+
+  .ingredients {
+    max-width: 32.8125rem;
+  }
+
+  h1,
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+
+  p,
+  li,
+  strong {
+    font-size: 1.25rem;
+    line-height: 1.5625rem;
+  }
+
+  button {
+    padding: .625rem 1.25rem;
+    font-size: .875rem;
+    line-height: 1.5rem;
+  }
+}
