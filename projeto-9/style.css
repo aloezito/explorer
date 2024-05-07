@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-title: #0C3440;
+  --color-label: #00453A;
+  --color-input: #212529;
+  --color-input-bg: #DCE2E9;
+  --color-input-outline: #02799D;
+  --color-input-border: #4950574d;
+  --color-input-placeholder: #49505780;
+  --color-button-text: #ffffff;
+  --color-button-bg: #02799D;
+  --color-button-bg-hover: #01475c;
+  --color-error-text: #ffffff;
+  --color-error-bg: #F03E3E;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #040924;
+}
+
+body,
+input,
+button {
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.card {
+  padding: 3rem 4rem 4rem;
+  background-color: white;
+  max-width: 26.75rem;
+  margin: 0 auto;
+
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
+  border-radius: .375rem;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+form {
+  width: 18.75rem;
+}
+
+form h1 {
+  margin-bottom: 2rem;
+  color: var(--color-title);
+}
+
+form label {
+  display: block;
+  font-size: .875rem;
+  line-height: 1.125rem;
+  color: var(--color-label);
+  margin-bottom: .5rem;
+}
+
+form input {
+  padding: 1rem;
+  width: 100%;
+  background-color: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: .25rem;
+}
+
+form input:focus {
+  outline: 2px solid var(--color-input-outline);
+}
+
+form input::placeholder {
+  color: var(--color-input-placeholder);
+}
+
+form .input-wrapper+.input-wrapper {
+  margin-top: 1rem;
+}
+
+form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: .25rem;
+
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+form button:hover {
+  background-color: var(--color-button-bg-hover);
+}
+
+/* Modal */
+.modal-wrapper.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-wrapper {
+  visibility: hidden;
+  opacity: 0;
+
+  display: grid;
+  place-content: center;
+  position: absolute;
+  inset: 0;
+  background-color: #000000b3;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
+}
+
+/* Alert Box */
+.alert-box.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-box {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-1.875rem);
+  transition: transform 500ms;
+
+  position: absolute;
+  background-color: var(--color-error-bg);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--color-error-text);
+  padding: .5rem 0;
+  font-weight: bold;
+}
