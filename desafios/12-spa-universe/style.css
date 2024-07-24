@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 250ms ease-in-out;
+}
+
+:root {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  color: #e1e1e6;
+  font-size: 1.125rem;
+  line-height: 160%;
+  height: 100vh;
+  background-color: black;
+  background-image: url(./assets/mountains-universe-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#app {
+  height: 69vh;
+  padding: 3.75rem 6.5rem;
+}
+
+#app div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 45%;
+}
+
+body.universe-page {
+  background: url(./assets/mountains-universe-2.png);
+}
+
+body.exploration-page {
+  background: url(./assets/mountains-universe-3.png);
+}
+
+nav {
+  padding: 2.5rem 4.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+nav a {
+  font-size: 24px;
+  font-weight: 400;
+  color: #C4C4CC;
+  text-decoration: none;
+}
+
+nav a::before {
+  display: block;
+  content: attr(title);
+  font-weight: 700;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+nav a:hover {
+  color: white;
+  font-weight: 700;
+}
+
+nav a:active {
+  color: white;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#app div.home-page {
+  height: 100%;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#app div.home-page a {
+  color: white;
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: .75rem 2rem;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+#app div.home-page a:hover {
+  color: #02799D;
+  background-color: white;
+}
