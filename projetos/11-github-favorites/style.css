@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --text-color: #E1E1E6;
+}
+
+body {
+  padding: 7.5rem 10rem;
+  color: var(--text-color);
+  background-color: black;
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app header {
+  display: flex;
+  width: 100%;
+  max-width: 1120px;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+#app .search {
+  display: flex;
+  gap: .5rem;
+}
+
+#app .search #github-search {
+  padding: 1rem;
+
+  color: white;
+  background-color: #06181C;
+
+  width: min(30rem, 30vw);
+
+  border: none;
+  border-radius: 5px;
+}
+
+#app .search #github-search::placeholder {
+  color: #7C7C8A;
+}
+
+#app .favorite-button {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  font-size: .875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding: .75rem 2rem;
+  color: white;
+  background-color: #065E7C;
+  border: none;
+  border-radius: 5px;
+
+  transition: 250ms;
+}
+
+#app .favorite-button:hover {
+  color: #065E7C;
+  background-color: white;
+  cursor: pointer;
+}
+
+#app table {
+  width: 100%;
+  max-width: 70rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  border: 2px solid #4A808C;
+  border-radius: 12px;
+  border-spacing: 0;
+  overflow: hidden;
+
+  /* white-space: nowrap; */
+}
+
+#app table thead tr th:first-child {
+  padding-left: 2.5rem;
+}
+
+#app table thead tr th:last-child {
+  padding-right: 2.5rem;
+}
+
+#app table tbody tr td:first-child {
+  padding-left: 2.5rem;
+}
+
+#app table tbody tr td:last-child {
+  padding-right: 2.5rem;
+}
+
+#app table thead tr th {
+  background: #092D38;
+  padding: 1rem 0;
+  text-align: start;
+}
+
+#app table tbody tr td {
+  padding: 1.5rem 0;
+  background: #06161b80;
+}
+
+#app table tbody tr:nth-child(even) {
+  background: #06181C;
+}
+
+#app table tbody tr+tr td {
+  border-top: 2px solid #4A808C;
+}
+
+#app table tbody tr td.user .user-wrapper {
+  display: flex;
+}
+
+#app table tbody tr td.user a {
+  display: flex;
+  gap: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+#app table tbody tr td.user div.links-wrapper span {
+  font-weight: 400;
+}
+
+#app table tbody tr td.user a img {
+  width: 3.5rem;
+  border-radius: 50%;
+  max-height: 56px;
+  align-self: center;
+}
+
+#app table tbody tr td.remove button {
+  font-size: 1.5rem;
+  color: red;
+  border: none;
+  background-color: transparent;
+}
+
+#app table tbody tr td.remove button:hover {
+  cursor: pointer;
+}
